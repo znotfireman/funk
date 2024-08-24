@@ -68,6 +68,8 @@ end
   Bind a function to an object, meaning that whenever the function is called,
   the value of this will be the object. Optionally, pass arguments to the
   function to pre-fill them, also known as partial application.
+
+  @within Funk
 ]=]
 function functions.bind<Self, Arg, Returns...>(self: Self, fn: (Self, ...Arg) -> Returns..., ...: Arg): (...Arg) -> Returns...
   local partial = compat.pack(...)
@@ -88,6 +90,8 @@ end
 --[=[
   Memoizes a given function by caching the results to be returned when the same
   arguments occur again.
+
+  @within Funk
 ]=]
 function functions.memoize(fn: (...any) -> ...any)
   local cache: Cache = weaken()
@@ -107,6 +111,8 @@ function functions.noop() end
 --[=[
   Partially apply a function by creating a version that has had some of its
   arguments pre-filled.
+  
+  @within Funk
 ]=]
 function functions.partial<Arg, Returns...>(fn: (...Arg) -> Returns..., ...: Arg): (...Arg) -> Returns...
   local partial = compat.pack(...)
