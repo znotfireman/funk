@@ -1,0 +1,6 @@
+{
+  "lint": {
+    "*": true,
+    "LocalShadow": false
+  }
+}

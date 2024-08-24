@@ -1,0 +1,9 @@
+{
+  "luau-lsp.require.mode": "relativeToFile",
+  "luau-lsp.require.directoryAliases": {
+    "funk": "src"
+  },
+  "luau-lsp.types.definitionFiles": [
+    "types/funk.d.luau"
+  ]
+}

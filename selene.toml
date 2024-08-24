@@ -1,0 +1,8 @@
+std = "selene-std"
+exclude = ["**.d.lua"]
+
+[config]
+  global_usage = { ignore_pattern = "^__" }
+
+[lints]
+  shadowing = "allow"
